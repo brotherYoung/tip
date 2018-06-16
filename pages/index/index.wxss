@@ -55,5 +55,6 @@ swiper-item {
 .icon-lajixiang {
   position: absolute;
   right: 100rpx;
+  bottom: 120rpx;
 }
 

@@ -27,7 +27,7 @@
 
   <view class="bottom">
     <icon class="icon-guanyuwomen"></icon>
-    <icon class="icon-zengjia"></icon>
+    <icon id="zengjia" class="icon-zengjia" bindtap="tap"></icon>
     <icon class="icon-fenxiang"></icon>
   </view>
     

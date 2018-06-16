@@ -54,5 +54,13 @@ Page({
   },
   formSubmit: function(e) {
     console.log(e.detail.formId)
+  },
+  tap: function(e) {
+    if (e.target.id == "zengjia") {
+      wx.navigateTo({
+        url: '/pages/detail/detail'
+      })
+    }
+
   }
 })
