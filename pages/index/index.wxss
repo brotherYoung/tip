@@ -1,0 +1,59 @@
+/**index.wxss**/
+@import "/styles/icon-svg/icon-svg.wxss";
+
+.card {
+    border-radius: 4px;
+    border: 1px solid #ebeef5;
+    background-color: #fff;
+    overflow: hidden;
+    color: #303133;
+    transition: .3s;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    width: 500rpx;
+    height: 400rpx;
+    padding: 150rpx 40rpx;
+}
+
+.br {
+  border: 1px solid #ededed;
+  margin-top: 30rpx;
+}
+
+.card view {
+  border-bottom: 1rpx solid #ededed;
+  padding: 30rpx 0;
+}
+
+.no-border {
+  border: 0 none !important;
+}
+
+.no-border text {
+  line-height: 40px;
+}
+
+swiper {
+  height: 800rpx;
+}
+swiper-item {
+   padding: 80rpx 0 0 0;
+}
+.center {
+  margin-top: 100rpx;
+  width: 100%;
+}
+.bottom {
+  margin-top: 50rpx;
+}
+.bottom icon {
+  margin: 0 40rpx;
+}
+.icon-emoji-smile {
+  right: 50rpx;
+  top: 0;
+}
+.icon-lajixiang {
+  position: absolute;
+  right: 100rpx;
+}
+

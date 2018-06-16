@@ -1,0 +1,15 @@
+/**app.wxss**/
+page {
+  height: 100%;
+  background-color: #f6f8f9;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+} 
+
