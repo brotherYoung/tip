@@ -1,11 +1,17 @@
 // pages/detail/detail.js
+const util = require('../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    startDate: util.startDate,
+    date: util.startDate,
+    endDate: util.endDate,
+    startTime: util.startTime,
+    time: util.startTime,
+    weekDay: util.weekDay(util.startDate)
   },
 
   /**
@@ -62,5 +68,16 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  bindDateChange: function (e) {
+    this.setData({
+      date: e.detail.value,
+      weekDay: util.weekDay(e.detail.value)
+    })
+  },
+  bindTimeChange: function (e) {
+    this.setData({
+      time: e.detail.value
+    })
   }
 })

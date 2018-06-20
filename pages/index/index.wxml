@@ -1,27 +1,30 @@
 <!--index.wxml-->
 <view class="container">
   <view class="center">
-    <swiper previous-margin="80rpx" next-margin="50rpx">
+    <swiper previous-margin="80rpx" next-margin="50rpx" current="{{current}}">
       <swiper-item>
-        <icon class="icon-emoji-smile"></icon> 
+        <icon class="icon-emoji-smile"></icon>
         <view class="card">
-          <view>主题：<text>下午开会</text></view>
-          <view>时间：<text>2018/06/19   13：00</text></view>
-          <view class="no-border">内容：
-            <text>今天下午14：00，在5楼会议室开会</text>
-          </view>
-          <icon class="icon-lajixiang"></icon>
+          使用帮助
         </view>
       </swiper-item>
-      <swiper-item>
-        <view class="card">
-          <view>主题：<text>下午开会</text></view>
-          <view>时间：<text>2018/06/19   13：00</text></view>
-          <view class="no-border">内容：
-            <text>今天下午14：00，在5楼会议室开会</text>   
+      <block wx:for="{{jobDetail}}">
+        <swiper-item>
+          <icon class="icon-emoji-smile"></icon>
+          <view class="card">
+            <view>主题：
+              <text>{{item}}</text>
+            </view>
+            <view>时间：
+              <text>2018/06/19   13：00</text>
+            </view>
+            <view class="no-border">内容：
+              <text>今天下午14：00，在5楼会议室开会</text>
+            </view>
+            <icon data-index="{{index}}" class="icon-lajixiang" bindtap="deleteCard"></icon>
           </view>
-        </view>
-      </swiper-item>
+        </swiper-item>
+      </block>
     </swiper>
   </view>
 
@@ -30,5 +33,5 @@
     <icon id="zengjia" class="icon-zengjia" bindtap="tap"></icon>
     <icon class="icon-fenxiang"></icon>
   </view>
-    
+
 </view>

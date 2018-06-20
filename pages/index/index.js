@@ -4,11 +4,13 @@ const app = getApp()
 
 Page({
   data: {
+    jobDetail: ["1", "2", "3", "4"],
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    cssSelect: "icon-open-new"
+    cssSelect: "icon-open-new",
+    current: 0
   },
   //事件处理函数
   bindViewTap: function() {
@@ -62,5 +64,19 @@ Page({
       })
     }
 
+  },
+  deleteCard: function(e) {
+
+    var arr = this.data.jobDetail
+    var index = e.currentTarget.dataset.index
+    arr.splice(index, 1)
+    console.log(index)
+    if(index < arr.length) {
+      index += 1 
+    }
+    this.setData({
+      jobDetail: arr,
+      current: index
+    })
   }
 })

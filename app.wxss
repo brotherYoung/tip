@@ -13,3 +13,16 @@ page {
   font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
 } 
 
+.card view {
+  border-bottom: 1rpx solid #ededed;
+  padding: 30rpx 0;
+}
+
+.no-border {
+  border: 0 none !important;
+}
+
+.no-border text {
+  line-height: 40px;
+}
+

@@ -1,2 +1,29 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class="container">
+  <form>
+    <view class="card">
+      <view>
+        <icon style='display: inline-block' class="icon-bianji"></icon>
+        <input style="display: inline-block" placeholder="点击输入标题"></input>
+      </view>
+      <view>
+        <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+          <text class="picker">提醒日期： {{date}}  {{weekDay}}</text>
+        </picker>
+      </view>
+      <view>
+        <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+          <text class="picker">提醒时间： {{time}}</text>
+        </picker>
+      </view>
+      <view class="no-border">
+        <textarea placeholder="点击输入提醒内容"></textarea>
+      </view>
+    </view>
+    <view class="bottom">
+      <button class="icon-del" hover-class="none" form-type="reset"></button>
+      <button class="icon-cgong" hover-class="none" form-type="submit"></button>
+    </view>
+  </form>
+
+</view>
