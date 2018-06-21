@@ -6,3 +6,4 @@
 
 完善的功能：
 1.  ~~bindsubmit 和 bindreset 功能~~
+2. detail页面中标题自动获取焦点，不允许为空
