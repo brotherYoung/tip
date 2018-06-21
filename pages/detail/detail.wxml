@@ -1,23 +1,23 @@
 <!--pages/detail/detail.wxml-->
 <view class="container">
-  <form>
+  <form bindreset="formReset" bindsubmit="formSubmit">
     <view class="card">
       <view>
         <icon style='display: inline-block' class="icon-bianji"></icon>
-        <input style="display: inline-block" placeholder="点击输入标题"></input>
+        <input name="title" style="display: inline-block" placeholder="点击输入标题" focus="true"></input>
       </view>
       <view>
-        <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+        <picker name="date" mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
           <text class="picker">提醒日期： {{date}}  {{weekDay}}</text>
         </picker>
       </view>
       <view>
-        <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+        <picker name="time" mode="time" value="{{time}}" bindchange="bindTimeChange">
           <text class="picker">提醒时间： {{time}}</text>
         </picker>
       </view>
       <view class="no-border">
-        <textarea placeholder="点击输入提醒内容"></textarea>
+        <textarea name="content" placeholder="点击输入提醒内容"></textarea>
       </view>
     </view>
     <view class="bottom">
